@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="PasswordBoxWithEye.Controls.PaswordBoxWithEye"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PasswordBoxWithEye.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="300">
+    <Grid>
+        <PasswordBox x:Name="textBoxPrivatePassword" Width="300" Visibility="Visible" GotFocus="textBoxPrivatePassword_GotFocus" 
+                     PasswordChanged="textBoxPrivatePassword_PasswordChanged" VerticalAlignment="Center">
+        </PasswordBox>
+        <TextBox x:Name="textBoxPlainPassword" Width="300" Margin="0,0,0,0" Visibility="Hidden" 
+                 GotFocus="textBoxPlainPassword_GotFocus" TextChanged="textBoxPlainPassword_TextChanged" VerticalAlignment="Center">
+        </TextBox>
+        <Label x:Name="labelEyeShow" HorizontalAlignment="Right" Visibility="Hidden" 
+               MouseLeftButtonUp="labelEyeShow_MouseLeftButtonUp">
+            <Image Source="/Controls/show-password.jpg"></Image>
+        </Label>
+        <Label x:Name="labelEyeHide" HorizontalAlignment="Right" MouseLeftButtonUp="labelEyeHide_MouseLeftButtonUp">
+            <Image Source="/Controls/hide-password.jpg" ></Image>
+        </Label>
+    </Grid>
+</UserControl>
